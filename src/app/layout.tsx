@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-
 import "./globals.css";
-
+import { Toaster } from "sonner";
 
 
 export const metadata: Metadata = {
@@ -15,10 +14,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
+<html lang="en">
+       <body className="bg-background font-popins dark:bg-[#020817]">   
         {children}
-      </body>
+        <Toaster richColors position="top-right" />
+       </body>
     </html>
   );
 }
